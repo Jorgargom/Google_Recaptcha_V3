@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Google reCAPTCHA v3</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
-    <script src="https://www.google.com/recaptcha/api.js?render=6LcEXJQUAAAAAKS79EnNd9AS68RjptageqkqSFwU"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=key"></script>
     <script>
         grecaptcha.ready(function () {
-            grecaptcha.execute('6LcEXJQUAAAAAKS79EnNd9AS68RjptageqkqSFwU', { action: 'contact' }).then(function (token) {
+            grecaptcha.execute('key', { action: 'contact' }).then(function (token) {
                 var recaptchaResponse = document.getElementById('recaptchaResponse');
                 recaptchaResponse.value = token;
             });
@@ -28,7 +28,7 @@
 
                         // Build POST request:
                         $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
-                        $recaptcha_secret = '6LcEXJQUAAAAAFiAdVMtnM7AbPigLOO-PsYYXECx';
+                        $recaptcha_secret = 'Secretkey';
                         $recaptcha_response = $_POST['recaptcha_response'];
 
                         // Make and decode POST request:
